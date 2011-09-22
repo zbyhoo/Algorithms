@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		264477C5142BCBF700FFD2BC /* algorithms_and_data_structures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithms_and_data_structures; sourceTree = BUILT_PRODUCTS_DIR; };
 		264477C9142BCBF700FFD2BC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		264477D4142BCD4C00FFD2BC /* sorting.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sorting.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				264477C9142BCBF700FFD2BC /* main.cpp */,
+				264477D4142BCD4C00FFD2BC /* sorting.hpp */,
 			);
 			path = algorithms_and_data_structures;
 			sourceTree = "<group>";
@@ -87,6 +89,9 @@
 /* Begin PBXProject section */
 		264477BC142BCBF700FFD2BC /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = zbyhoo;
+			};
 			buildConfigurationList = 264477BF142BCBF700FFD2BC /* Build configuration list for PBXProject "algorithms_and_data_structures" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
