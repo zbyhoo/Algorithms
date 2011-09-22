@@ -13,6 +13,8 @@ namespace ads
 {
     namespace sorting
     {
+        //! Sorts elements in the range [first, last) into ascending order using insertion sort algorithm
+        //! Worst-case running time: O(n^2)
         template <class value_type, class random_access_iterator>
         void insertion_sort(random_access_iterator first, random_access_iterator last)
         {
