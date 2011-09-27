@@ -9,7 +9,7 @@
 #include "sorting.hpp"
 
 #include <boost/test/unit_test.hpp>
-#include <boost/assign/std/vector.hpp>
+#include <boost/assign.hpp>
 
 using namespace boost::assign;
 using namespace ads::sorting;
@@ -26,10 +26,24 @@ BOOST_AUTO_TEST_CASE(small_array_of_ints)
     expected += 1, 2, 3;
     
     // when
-    insertion_sort<int>(input.begin(), input.end());
+    insertion_sort(input.begin(), input.end());
     
     // then
     BOOST_CHECK_EQUAL_COLLECTIONS(input.begin(), input.end(), expected.begin(), expected.end());
 }
+
+BOOST_AUTO_TEST_CASE(small_list_of_ints)
+{
+    // given
+    std::list<int> input = list_of(3)(1)(2);
+    std::list<int> expected = list_of(1)(2)(3);
+    
+    // when
+    insertion_sort(input.begin(), input.end());
+    
+    // then
+    BOOST_CHECK_EQUAL_COLLECTIONS(input.begin(), input.end(), expected.begin(), expected.end());
+}
+
 
 BOOST_AUTO_TEST_SUITE_END()

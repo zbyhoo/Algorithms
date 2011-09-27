@@ -9,27 +9,31 @@
 #ifndef ADS_SORTING_HPP
 #define ADS_SORTING_HPP
 
+#import <iterator>
+
 namespace ads
 {
     namespace sorting
     {
         //! Sorts elements in the range [first, last) into ascending order using insertion sort algorithm
         //! Worst-case running time: O(n^2)
-        template <class value_type, class random_access_iterator>
-        void insertion_sort(random_access_iterator first, random_access_iterator last)
+        template <class iterator_type>
+        void insertion_sort(iterator_type first, iterator_type last)
         {
-            random_access_iterator j = first;
+            typename std::iterator_traits<iterator_type>::value_type key;
+            
+            iterator_type j = first;
             
             for (++j; j != last; ++j)
             {
-                value_type key = *j;
-                random_access_iterator i = j;
+                key = *j;
+                iterator_type i = j;
                 --i;
 
                 bool end_of_array = false;
                 while (*i > key)
                 {
-                    random_access_iterator next = i;
+                    iterator_type next = i;
                     ++next;
                     
                     *next = *i;
@@ -42,7 +46,7 @@ namespace ads
                     --i;
                 }
                 
-                random_access_iterator next = i;
+                iterator_type next = i;
                 if (!end_of_array)
                     ++next;
                 *next = key;
